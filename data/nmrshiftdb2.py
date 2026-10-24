@@ -111,7 +111,7 @@ def add_mol(mol_dict, mol):
 
 molsuppl = Chem.SDMolSupplier('nmrshiftdb2withsignals.sd', removeHs = False)
 
-atom_list = ['Li','B','C','N','O','F','Na','Mg','Al','Si','P','S','Cl','K','Ti','Zn','Ge','As','Se','Br','Pd','Ag','Sn','Sb','Te','I','Hg','Tl','Pb','Bi']
+atom_list = ['Li','B','C','N','O','F','Na','Mg','Al','Si','P','S','Cl','K','Ti','Zn','Ge','As','Se','Br','Pd','Ag','Sn','Sb','Te','I','Hg','Tl','Pb','Bi', 'H', 'Os']
 charge_list = [1, 2, 3, -1, -2, -3, 0]
 degree_list = [1, 2, 3, 4, 5, 6, 0]
 valence_list = [1, 2, 3, 4, 5, 6, 0]
