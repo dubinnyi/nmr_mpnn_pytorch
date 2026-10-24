@@ -160,7 +160,12 @@ for i, mol in enumerate(molsuppl):
             atom.SetBoolProp('mask', 0)
 
     mol = Chem.RemoveHs(mol)
-    mol_dict = add_mol(mol_dict, mol)
+    try:
+        mol_dict = add_mol(mol_dict, mol)
+    except ValueError as e:
+        # Выведет ошибку и SMILES молекулы, чтобы вы понимали, что именно было пропущено
+        print(f"Skipping the molecule {i} ({Chem.MolToSmiles(mol)}): error {e}")
+        continue
 
     if (i+1) % 1000 == 0: print('%d/%d processed' %(i+1, len(molsuppl)))
 
